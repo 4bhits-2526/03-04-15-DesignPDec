@@ -56,6 +56,8 @@ Besprecht in eurer Gruppe und beantwortet hier direkt:
 2. Welches Verhalten gehört **nicht direkt** in die Basisklasse?
 3. Warum wäre es problematisch, alle neuen Effekte direkt in derselben Klasse zu implementieren?
 
+Das Basisverhalten ist, dass ein Objekt sich kontinuierlich zwischen zwei Punkten (Point A und Point B) hin und her bewegt.
+Die Bewegung erfolgt mit einer bestimmten Geschwindigkeit, und sobald das Objekt einen Punkt erreicht, wechselt das Ziel zum anderen Punkt.
 ---
 
 # Teil 2 – Refactoring inkl. UML
@@ -65,7 +67,23 @@ Baut das Projekt so um, dass:
 - das **Basisverhalten isoliert** wird
 - Erweiterungen **nicht direkt in der Bewegungsklasse** implementiert werden
 - zusätzliche Effekte über **Decorator-Klassen** hinzugefügt werden können
+Folgende Effekte gehören nicht zum Kern der Bewegung:
 
+Farbwechsel beim Richtungswechsel
+
+Rotation
+
+Glow / visuelles Glimmen
+
+Spur (Trail)
+
+Größenänderung
+
+Soundeffekte
+
+Debug-Anzeigen
+
+Diese sind optionale visuelle oder akustische Erweiterungen, die unabhängig von der eigentlichen Bewegung sind.
 ---
 
 # Teil 3 – Decorator implementieren
